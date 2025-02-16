@@ -20,7 +20,7 @@ body {
 
 #foot {
   width: 100%;
-  height: 900px; /* or any specific height */
+  height: 75vh; /* or any specific height */
   background-image: url(images/birdbrainzcharacter.png);
   background-repeat: repeat-x;
   position: absolute;
