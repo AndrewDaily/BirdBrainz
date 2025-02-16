@@ -6,11 +6,11 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Ensure full height */
+/* Ensure full height and allow vertical growth */
 html, body {
-  height: 100%;
+  min-height: 100%;
   background-color: #ffd200;
-  overflow-x: hidden;
+  overflow-x: hidden;  /* Only hide horizontal overflow */
 }
 
 /* Header with fixed height */
@@ -32,7 +32,7 @@ html, body {
 
 /* Background container for the image */
 #bg-container {
-  height: calc(100vh - 100px);  /* Fills remaining viewport on desktop */
+  min-height: calc(100vh - 100px);  /* Fills remaining viewport on desktop, but can expand if needed */
   background-image: url('images/birdbrainzcharacter.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -49,7 +49,7 @@ html, body {
     font-size: 1.5rem;
   }
   #bg-container {
-    height: calc(100vh - 70px);  /* Adjust container height to match mobile header */
+    min-height: calc(100vh - 70px);  /* Adjust container height to match mobile header */
     background-size: contain;  /* Use contain to show the entire image without distortion */
     background-position: center;
   }
