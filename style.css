@@ -9,7 +9,7 @@
 /* Ensure full height */
 html, body {
   height: 100%;
-  overflow:hidden;
+  
   background-color: #ffd200;
 }
 
