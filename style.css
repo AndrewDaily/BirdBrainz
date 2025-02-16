@@ -9,13 +9,13 @@
 /* Ensure full height */
 html, body {
   height: 100%;
-  
   background-color: #ffd200;
+  overflow-x: hidden;
 }
 
 /* Header with fixed height */
 .header {
-  height: 100px;  /* adjust as needed */
+  height: 100px;  /* Desktop header height */
   background-color: black;
   display: flex;
   justify-content: flex-end;
@@ -30,11 +30,27 @@ html, body {
   text-decoration: none;
 }
 
-/* New background container */
+/* Background container for the image */
 #bg-container {
-  height: calc(100vh - 100px);  /* Fills the rest of the viewport */
+  height: calc(100vh - 100px);  /* Fills remaining viewport on desktop */
   background-image: url('images/birdbrainzcharacter.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;   /* Stretches image to fill container exactly */
+  background-size: 100% 100%;  /* Stretches image to fill container exactly */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .header {
+    height: 70px;  /* Smaller header for mobile */
+    padding: 0 1rem;
+  }
+  .about {
+    font-size: 1.5rem;
+  }
+  #bg-container {
+    height: calc(100vh - 70px);  /* Adjust container height to match mobile header */
+    background-size: contain;  /* Use contain to show the entire image without distortion */
+    background-position: center;
+  }
 }
