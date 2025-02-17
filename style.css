@@ -75,11 +75,12 @@ html, body {
 
 /* Background container */
 #bg-container {
-  height: calc(100vh - 16vh); /* Adjust to remaining viewport */
+  height: calc(100vh - 16vh); /* Adjust height to fit screen */
+  min-height: calc(100vh - 16vh); /* Ensures it doesn't shrink */
   background-image: url('images/birdbrainzcharacter.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100% 100%; /* Forces stretching */
+  background-size: 100% 100%; /* Forces stretching in X and Y */
 }
 
 /* 📱 Mobile Responsiveness */
@@ -102,7 +103,8 @@ html, body {
 
   #bg-container {
     height: calc(100vh - 12vh);
-    background-size: 100% 100%; /* Stretches the image */
+    min-height: calc(100vh - 12vh);
+    background-size: 100% 100%; /* Force stretch */
     background-position: center;
   }
 }
@@ -124,6 +126,7 @@ html, body {
 
   #bg-container {
     height: calc(100vh - 10vh);
+    min-height: calc(100vh - 10vh);
     background-size: 100% 100%; /* Forces stretching */
     background-position: center;
   }
