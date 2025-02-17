@@ -7,12 +7,28 @@
 }
 
 /* Ensure full height */
-html, body {
+.html, .body {
   height: 100%;
   background-color: #ffd200;
   overflow: hidden;
 }
+.bg{
+  height: 100%;
+  background-color: #ffd200;
+}
 
+.about1{
+  text-align: center;
+  font-size: 50px;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px black;
+}
+.about2{
+  text-align: center;
+  font-size: 25px;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px black;
+}
 /* Header */
 .header {
   height: 16vh;
@@ -83,7 +99,20 @@ html, body {
   background-size: 100% 100%; /* Forces stretching in X and Y */
 }
 
-/* 📱 Mobile Responsiveness */
+.bg {
+  position: fixed; /* Ensures it covers the whole screen minus the header */
+  top: 16vh; /* Starts right below the header */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 16vh); /* Covers everything below header */
+  background-image: url('images/funnyburger.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; /* Ensures it fills the space */
+  z-index: -1; /* Keeps it behind other content */
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .header {
     height: 12vh;
@@ -101,15 +130,15 @@ html, body {
     background-size: contain;
   }
 
-  #bg-container {
+  #bg-container, .bg {
     height: calc(100vh - 12vh);
     min-height: calc(100vh - 12vh);
-    background-size: 100% 100%; /* Force stretch */
-    background-position: center;
+    background-size: cover;
+    background-position: top;
   }
 }
 
-/* 📱 Extra Small Screens (Phones) */
+/* Extra Small Screens (Phones) */
 @media (max-width: 480px) {
   .header {
     height: 10vh;
@@ -124,10 +153,10 @@ html, body {
     background-size: contain;
   }
 
-  #bg-container {
+  #bg-container, .bg {
     height: calc(100vh - 10vh);
     min-height: calc(100vh - 10vh);
-    background-size: 100% 100%; /* Forces stretching */
-    background-position: center;
+    background-size: cover;
+    background-position: top;
   }
 }
