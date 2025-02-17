@@ -13,9 +13,9 @@ html, body {
   overflow: hidden;
 }
 
-/* Header with fixed height */
+/* Header */
 .header {
-  height: 16vh; /* Responsive header height */
+  height: 16vh;
   background-color: #1a1a40;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   display: flex;
@@ -79,8 +79,7 @@ html, body {
   background-image: url('images/birdbrainzcharacter.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
-  min-height: 400px; /* Ensures it doesn’t shrink too much */
+  background-size: 100% 100%; /* Forces stretching */
 }
 
 /* 📱 Mobile Responsiveness */
@@ -103,7 +102,7 @@ html, body {
 
   #bg-container {
     height: calc(100vh - 12vh);
-    background-size: contain; /* Ensures full image visibility */
+    background-size: 100% 100%; /* Stretches the image */
     background-position: center;
   }
 }
@@ -125,8 +124,7 @@ html, body {
 
   #bg-container {
     height: calc(100vh - 10vh);
-    background-size: contain; /* Prevents distortion */
+    background-size: 100% 100%; /* Forces stretching */
     background-position: center;
-    min-height: 300px; /* Ensures a minimum height on very small devices */
   }
 }
