@@ -22,14 +22,11 @@ html, body {
   justify-content: flex-end;
   align-items: center;
   padding: 0 2rem;
-
   
-    height: calc(16vh - 1px);  /* Fills remaining viewport on desktop */
-    background-image: url('images/birdbrainzlogo.png');
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: contain;  /* Ensures the image covers the container without stretching */
-    
+  background-image: url('images/birdbrainzlogo.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
 }
 
 /* About link styling */
@@ -76,23 +73,24 @@ html, body {
   background-color: transparent;
 }
 
-/* Background container for the image */
+/* Background container */
 #bg-container {
   height: calc(100vh - 16vh); /* Adjust to remaining viewport */
   background-image: url('images/birdbrainzcharacter.png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
+  min-height: 400px; /* Ensures it doesn’t shrink too much */
 }
 
-/* Mobile Responsiveness */
+/* 📱 Mobile Responsiveness */
 @media (max-width: 768px) {
   .header {
-    height: 12vh; /* Smaller header on tablets & phones */
+    height: 12vh;
     padding: 0 1rem;
     justify-content: center;
   }
-  
+
   .about {
     font-size: 1.5rem;
     margin-left: 1rem;
@@ -100,18 +98,17 @@ html, body {
 
   .customCurser {
     height: 12vh;
-    width: auto;
     background-size: contain;
   }
 
   #bg-container {
     height: calc(100vh - 12vh);
-    background-size: contain;
+    background-size: contain; /* Ensures full image visibility */
     background-position: center;
   }
 }
 
-/* Extra small devices */
+/* 📱 Extra Small Screens (Phones) */
 @media (max-width: 480px) {
   .header {
     height: 10vh;
@@ -128,5 +125,8 @@ html, body {
 
   #bg-container {
     height: calc(100vh - 10vh);
+    background-size: contain; /* Prevents distortion */
+    background-position: center;
+    min-height: 300px; /* Ensures a minimum height on very small devices */
   }
 }
